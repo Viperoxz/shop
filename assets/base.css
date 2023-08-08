@@ -45,20 +45,36 @@ html{
 /* Button style */
 .btn{
     min-width: 142px;
-    height: 36px;
+    height: 34px;
     text-decoration: none;
     border: none;
     border-radius: 2px;
     font-size: 1.4rem;    
     padding: 0;
-    /* display: flex;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center; */
+}
+
+.btn.btn--normal:hover{
+    
 }
 
 .btn.btn--primary{
     background-color: var(--primary-color);
     color: var(--white-color);
+}
 
+.btn.btn--disable{
+    cursor: default;
+    background-color: #c3c3c3;
+}
+
+.btn.btn--size-s{
+    height: 32px;
+    font-size: 14px;
 }
 

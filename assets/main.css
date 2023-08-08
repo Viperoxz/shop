@@ -1,0 +1,342 @@
+.header{
+    height: 120px;
+    background-image: linear-gradient(0, #48b9cc, #48d3cd);
+}
+
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.header__navbar-item{
+    margin: 0 8px;
+    position: relative;
+}
+
+.header__navbar-item,
+.header__navbar-item-link{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link{
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__navbar-item:hover,
+.header__navbar-item-link:hover,
+.header__navbar-icon-link:hover{
+    color: darkgray;
+    cursor: pointer;
+}
+.header__navbar-icon{
+    font-size: 16px;
+    margin: 0 4px;
+}
+
+.header__navbar-icon-link{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.header__navbar-item--strong{
+    font-weight: 600;
+}
+
+.header__navbar-item--seperate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #000;
+    height: 16px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-60%)  ;
+}
+
+.header__navbar-title--nopointer{
+    cursor: default;
+    color: var(--text-color);
+}
+
+/* Header QR Code */
+.header__qr{
+    width: 186px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 120%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in .4s;
+}
+
+.header__qr::before{
+    position: absolute;
+    left: 0;
+    top: -16px;
+    width: 100%;
+    height: 20px;
+    content: '';
+    display: block;
+}
+
+.header__qr-img{
+    width: 100%;
+}
+
+.header__qr-apps{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__qr-download-img{
+    height: 16px;
+}
+
+.header__navbar-item--qr:hover .header__qr{
+    display: block;
+}
+
+/* Header notification */
+.header__noti{
+    position: absolute;  
+    top: 118%;
+    right: 0;
+    width: 404px;
+    border: 1px solid #cbc8c8;
+    background-color: var(--white-color);
+    /* Vị trí khung thông báo bắt đầu xuất hiện (mặc định ở giữa) */
+    transform-origin: top right;
+    animation: headerNotiAppear ease-in .2s;
+    /* Giúp trình duyệt tối ưu bằng cách khai báo những thuộc tính thay đổi trong animation */
+    will-change: opacity, transform;
+    display: none;
+}
+
+.header__noti::before{
+    content: '';
+    border-style: solid;
+    border-width: 20px 24px;
+    border-color: transparent transparent var(--white-color) transparent;   
+    position: absolute;
+    right: 0;
+    top: -26px;
+}
+
+.header__noti::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 20px;
+    top: -16px;
+    right: 0;   
+}
+
+.header__navbar-item--has-noti:hover .header__noti{
+    display: block;
+}
+
+@keyframes headerNotiAppear{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__noti-header{
+    height: 40px;
+    background-color: var(--white-color);
+    cursor: default;
+}
+
+.header__noti-header h3{
+    color: #888;
+    margin: 0 0 0 12px;
+    font-weight: 200;
+    font-size: 1.4rem;
+    line-height: 40px;
+}
+
+.header__noti-list{
+    padding-left: 0;
+    background-color: var(--white-color);
+    list-style: none;
+}
+
+.header__noti-item{
+    display: flex;
+}
+
+.header__noti-item:hover{
+    background-color: #d6d4d4;
+}
+
+.header__noti-item--viewed{
+    background-color: rgba(19, 163, 240, 0.1);
+}
+
+.header__noti-link{
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    /* background-color: rgba(19, 163, 240, 0.1); */
+    width: 100%;
+}
+
+.header__noti-img{
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__noti-info{
+    margin-left: 12px;
+}
+
+.header__noti-info-name{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+
+.header__noti-info-desc{
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #777;
+    margin-top: 4px;
+}
+
+.header__noti-footer{
+    display: flex;
+}
+
+.header__noti-footer--btn{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: auto;
+    font-size: 1.4rem;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.modal__body{
+    background-color: var(--white-color);
+    margin: auto;
+    z-index: 2;
+    border-radius: 5px;
+}
+
+/* Authen modal*/
+.auth-form{
+    width: 500px;
+}
+
+.auth-form__container{
+    padding: 0 32px;
+}
+
+.auth-form__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading{
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    font-weight: 400;
+
+}
+
+.auth-form__switch-btn{
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.auth-form__switch-btn:hover{
+    color: #f5d000;
+}
+
+.auth-form__form{
+
+}
+
+.auth-form__group{
+
+}
+
+.auth-form__input{
+    width: 100%;
+    height: 48px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.auth-form__extra{
+    margin-top: 18px;
+}
+
+.auth-form__policy-text{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+}
+
+.auth-form__text-link{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.auth-form__controls{
+    margin-top: 68px;
+}
+
+/* .auth-form__socials{
+    display: flex;
+} */
+
+

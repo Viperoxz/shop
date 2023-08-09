@@ -1,5 +1,5 @@
 .header{
-    height: 120px;
+    height: var(--header-height);
     background-image: linear-gradient(0, #48b9cc, #48d3cd);
 }
 
@@ -11,6 +11,7 @@
 .header__navbar-list{
     list-style: none;
     padding-left: 0;
+    margin: 4px 0 0 0;
 }
 
 .header__navbar-item{
@@ -249,6 +250,8 @@
     left: 0;
     display: flex;
     animation: fadeIn linear .1s;
+    /* note */
+    display: none;
 }
 
 .modal__overlay{
@@ -420,4 +423,27 @@
 
 .auth-form__help-sms{
 
+}
+
+/* Header search */
+.header-with-search{
+    height: var(--header-with-search-height);
+    display: flex;
+    align-items: center;
+}
+
+.header__logo{
+    width: 200px;
+}
+
+.header__logo-img{
+    width: 150px;
+
+}
+
+.header__search{
+    flex: 1;
+    background-color: var(--white-color);
+    height: 40px;
+    border-radius: 2px;
 }

@@ -11,7 +11,7 @@
 .header__navbar-list{
     list-style: none;
     padding-left: 0;
-    margin: 4px 0 0 0;
+    margin: 12px 0 0 0;
 }
 
 .header__navbar-item{
@@ -430,6 +430,7 @@
     height: var(--header-with-search-height);
     display: flex;
     align-items: center;
+    padding: 0 8px;
 }
 
 .header__logo{
@@ -445,5 +446,43 @@
     flex: 1;
     background-color: var(--white-color);
     height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.header__cart{
+    width: 150px;
+    text-align: center;
+}
+
+.header__cart-icon{
+    color: var(--white-color);
+    font-size: 2.6rem;
+    margin-top: 6px;
+}
+
+.header__search-input{
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 0 16px;
     border-radius: 2px;
+}
+
+.header__search-selection{
+    border-left: 1px solid var(--border-color);
+    padding-left: 16px;
+}
+
+.header__search-select-label{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.header__search-select-icon{
+    font-size: 1.4rem;
+    color: #4A4A4A;
 }

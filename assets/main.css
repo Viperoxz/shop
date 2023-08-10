@@ -488,6 +488,46 @@
     display: block;
 }
 
+.header__cart-list-item{
+    padding-left: 0;
+    list-style: none;
+}
+
+.header__cart-item{
+    display: flex;
+}
+
+.header__cart-img{
+    width: 42px;
+    height: 52px;
+    margin: 12px;
+}
+
+.header__cart-item-info{
+
+}
+
+.header__cart-item-head{
+
+}
+
+.header__cart-item-name{
+
+}
+
+.header__cart-item-price{
+
+}
+
+.header__cart-item-price-multi{
+
+}
+
+.header__cart-item-quantity{
+
+}
+
+
 .header__search-input-wrap{
     flex: 1;    
     height: 100%;

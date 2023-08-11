@@ -110,7 +110,7 @@
 .header__navbar-item,
 .header__navbar-item-link,
 .header__navbar-icon-link{
-    /* display: inline-flex;  flex cũng được inline-flex cũng được vì thẻ cha đã có thuộc tính display : flex nên những phần tử con sẽ được xếp lên thẳng hàng theo trục main-axis */
+    /* display: inline-flex;  flex hay inline-flex cũng được vì thẻ cha đã có thuộc tính display : flex nên những phần tử con sẽ được xếp lên thẳng hàng theo trục main-axis */
     display: flex;
     align-items: center;
 }

@@ -439,7 +439,6 @@
 
 .header__logo-img{
     width: 150px;
-
 }
 
 .header__search{
@@ -488,6 +487,14 @@
     display: block;
 }
 
+.header__cart-heading{
+    text-align: left;
+    margin: 8px 0 8px 12px;
+    font-size: 1.4rem;
+    color: #999;
+    font-weight: 400;
+}
+
 .header__cart-list-item{
     padding-left: 0;
     list-style: none;
@@ -495,43 +502,87 @@
 
 .header__cart-item{
     display: flex;
+    align-items: center;
+}
+
+.header__cart-item:hover{
+    background-color: #f8f8f8;
 }
 
 .header__cart-img{
     width: 42px;
     height: 52px;
     margin: 12px;
+    border: 1px solid #e8e8e8;
 }
 
 .header__cart-item-info{
-
+    width: 100%;
+    margin-right: 12px;
 }
 
 .header__cart-item-head{
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header__cart-item-name{
-
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 5px 0 0;
 }
 
 .header__cart-item-price{
-
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--primary-color);
 }
 
 .header__cart-item-price-multi{
-
+    margin: 0 4px;
+    font-size: 0.9rem;
+    color: #757575;
 }
 
 .header__cart-item-quantity{
-
+    color: var(--primary-color);
+    font-size: 1.1rem;
 }
 
+.header__cart-item-body{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.header__cart-item-desc{
+    color: #757575;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.header__cart-remove{
+    color: #ee4d2d;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.header__cart-remove:hover{
+    color: var(--primary-color);
+}
 
 .header__search-input-wrap{
     flex: 1;    
     height: 100%;
     position: relative;
+}
+
+.header__cart-view-cart{
+    float: right;
+    margin: 0 12px 12px 0;
 }
 
 .header__search-input{
@@ -689,7 +740,7 @@
     position: absolute;
     top: calc(100% + 8px);
     right: -4px;
-    background-color: var(--white-color);
+    background-color: #fdfdfd;
     width: 400px;
     border-radius: 2px;
     box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, .2);
@@ -706,7 +757,7 @@
     border-width: 20px 26px;
     border-style: solid;
     cursor: pointer;
-    border-color: transparent transparent transparent transparent;
+    border-color: transparent transparent var(--white-color) transparent;
 
 }
 
@@ -719,10 +770,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.header__cart-list--no-cart .header__cart-list::after{
-    border-color: transparent transparent var(--white-color) transparent
 }
 
 .header__cart-no-cart-img{

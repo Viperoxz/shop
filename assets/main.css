@@ -61,6 +61,10 @@
     text-align: left;
 }
 
+.header__navbar-user-item-sep{
+    border-top: 1px solid rgba(0, 0, 0, .5);
+}
+
 .header__navbar-user-item a:last-child{
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
@@ -102,7 +106,7 @@
 .header__navbar-item,
 .header__navbar-item-link{
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--black-color);
     text-decoration: none;
 }
@@ -194,10 +198,12 @@
 /* Header notification */
 .header__noti{
     position: absolute;  
+    z-index: 1;
     top: 118%;
     right: 0;
     width: 404px;
-    border: 1px solid #cbc8c8;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, .1);
     background-color: var(--white-color);
     /* Vị trí khung thông báo bắt đầu xuất hiện (mặc định ở giữa) */
     transform-origin: top right;
@@ -518,6 +524,10 @@
     width: 200px;
 }
 
+.header__logo-link{
+
+}
+
 .header__logo-img{
     width: 150px;
 }
@@ -724,7 +734,7 @@
 .header__search-option{
     position: absolute;
     right: 0;
-    top: 118%;
+    top: 122%;
     width: 134px;
     box-shadow: 0 1px 3px #ccc;
     padding-left: 0;

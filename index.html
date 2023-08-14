@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/base.css">
     <link rel="stylesheet" href="./assets/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -33,8 +34,8 @@
                         </li>
                         <li class="header__navbar-item">
                             <span class="header__navbar-title--nopointer">Kết nối</span>
-                            <a href="" class="header__navbar-icon-link"><i class="header__navbar-icon ti-facebook"></i></a>
-                            <a href="" class="header__navbar-icon-link"><i class="header__navbar-icon ti-instagram"></i></a>
+                            <a href="" class="header__navbar-icon-link"><i class="header__navbar-icon fa-brands fa-facebook"></i></a>
+                            <a href="" class="header__navbar-icon-link"><i class="header__navbar-icon fa-brands fa-instagram"></i></a>
                         </li>
                     </ul>
     
@@ -339,22 +340,71 @@
                             <div class="select-input">
                                 <span class="select-input__label">Giá</span>
                                 <i class="select-input__icon ti-angle-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Giá: Thấp đến Cao</a>    
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Giá: Cao đến Thấp</a>    
+                                    </li>
+                                </ul>
                             </div>
 
                             <div class="home-filter__page">
                                 <span class="home-filter__page-num">
-                                    <span class="home-filter__page-current">1</span>
-                                    /
-                                    9
+                                    <span class="home-filter__page-current">1</span>/9
                                 </span>
 
                                 <div class="home-filter__page-control">
-                                    <a href="" class="home-filter__page-btn">
-                                        <i class="ti-angle-left"></i>
+                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                        <i class="home-filter__page-icon ti-angle-left"></i>
                                     </a>
                                     <a href="" class="home-filter__page-btn">
-                                        <i class="ti-angle-right"></i>
+                                        <i class="home-filter__page-icon ti-angle-right"></i>
                                     </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="home-product">
+                            <!-- Grid > Row > Column -->
+                            <div class="grid__row">
+                                <div class="grid__column-2">
+                                    <!-- Product-item -->
+                                    <div class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/0d4a99b94f9b74eb50f1a0f2fbd038fc);"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ nam chính hãng Olym Pianus OP990-45 OP990-45.24 OP990-45.24ADGS-GL trắng</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">₫7.992.000</span>
+                                            <span class="home-product-item__price-current">₫6.233.760</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <!-- <i class="fa-solid fa-heart"></i> -->
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Hà nội</span>
+                                            <div class="home-product-item__origin-name">Việt Nam</div>
+                                        </div>
+
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">30%</span>
+                                            <div class="home-product-item__sale-off-label">GIẢM</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -109,14 +109,19 @@ html{
 
 /* seleciton */
 .select-input{
+    position: relative;
     height: 34px;
     padding: 0 12px;
     border-radius: 2px;
     background-color: var(--white-color);
-    min-width: 120px;
+    min-width: 180px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.select-input:hover .select-input__list{
+    display: block;
 }
 
 .select-input__label{
@@ -130,4 +135,32 @@ html{
     position: relative;
     top: 1px;
     /* min-width: 200px; */
+}
+
+.select-input__list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 26px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 10px 16px;
+    list-style: none;
+    display: none;
+}
+
+.select-input__item{
+
+}
+
+.select-input__link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    display: block;
+    padding: 5px 0;
+}
+
+.select-input__link:hover{
+    color: var(--primary-color);
 }

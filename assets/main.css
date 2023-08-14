@@ -605,6 +605,7 @@
     height: 52px;
     margin: 12px;
     border: 1px solid #e8e8e8;
+    z-index: 1;
 }
 
 .header__cart-item-info{
@@ -1023,4 +1024,93 @@
     font-size: 1.2rem;
     color: #555;
 }
+
+/* Product-item */
+.home-product-item{
+    background-color: var(--white-color);
+    margin-top: 10px;
+}
+
+.home-product-item__img{
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    /* Trong trường hợp ảnh quá dài nhưng muốn đặt trọng tâm vào giữa */
+    /* background-size: cover;*/
+}
+
+.home-product-item__name{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.6rem;
+    margin: 10px;
+
+    /* Chỉnh lại sao cho chỉ hiện tối đa 2 dòng tên (Quá 2 dòng sẽ hiện ...) */
+    height: 3.2rem;
+    /* Khi đối tượng con chòi ra khỏi đối tượng cha thì ẩn nó đi */
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+
+.home-product-item__price{
+
+}
+
+.home-product-item__price-old{
+
+}
+
+.home-product-item__price-current{
+
+}
+
+.home-product-item__action{
+
+}
+
+.home-product-item__like{
+
+}
+
+.home-product-item__rating{
+
+}
+
+.home-product-item__origin{
+
+}
+
+.home-product-item__brand{
+
+}
+
+.home-product-item__origin-name{
+
+}
+
+.home-product-item__favorite{
+
+}
+
+.home-product-item__sale-off{
+
+}
+
+.home-product-item__sale-off-percent{
+
+}
+
+.home-product-item__sale-off-label{
+
+}
+
+
 

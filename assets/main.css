@@ -363,7 +363,7 @@
 .auth-form{
     width: 500px;
     border-radius: 5px;
-    overflow:hidden ;
+    overflow: hidden ;
     background-color: var(--white-color);
 }
 
@@ -1029,6 +1029,7 @@
 .home-product-item{
     background-color: var(--white-color);
     margin-top: 10px;
+    position: relative;
 }
 
 .home-product-item__img{
@@ -1046,7 +1047,7 @@
     font-weight: 400;
     color: var(--text-color);
     line-height: 1.6rem;
-    margin: 10px;
+    margin: 10px 10px 6px;
 
     /* Chỉnh lại sao cho chỉ hiện tối đa 2 dòng tên (Quá 2 dòng sẽ hiện ...) */
     height: 3.2rem;
@@ -1061,31 +1062,72 @@
 }
 
 .home-product-item__price{
-
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
 }
 
 .home-product-item__price-old{
-
+    font-size: 1.3rem;
+    color: #666;
+    text-decoration: line-through;
+    margin-left: 10px;
 }
 
 .home-product-item__price-current{
-
+    font-size: 1.5rem;
+    color: var(--sub-color);
+    margin-left: 10px;
 }
 
 .home-product-item__action{
-
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 10px 0;
 }
 
 .home-product-item__like{
+    font-size: 1.3rem;
+}
 
+i.home-product-item__like-icon-fill{
+    display: none;
+    color: #f63d30;
+}
+
+.home-product-item__like--liked i.home-product-item__like-icon-fill{
+    display: inline-block;
+}
+
+.home-product-item__like--liked i.home-product-item__like-icon-empty{
+    display: none;
 }
 
 .home-product-item__rating{
+    font-size: 1rem;
+    transform: scale(.8);
+    transform-origin: right;
+    margin-left: auto;
+    color: #d5d5d5;
+}
 
+.home-product-item__star--gold{
+    color: var(--star-color);
+}
+
+.home-product-item__sold{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-left: 6px;
 }
 
 .home-product-item__origin{
-
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 10px 0;
+    color: #595959;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 .home-product-item__brand{
@@ -1096,20 +1138,73 @@
 
 }
 
-.home-product-item__favorite{
+.home-product-item__mall{
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    background-color: rgb(208, 1, 27);
+    color: var(--white-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    padding-right: 4px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
 
+.home-product-item__mall::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2.75px;
+    border-top: 3px solid rgb(100, 3, 16);
+    border-left: 3px solid transparent;
+}
+
+.home-product-item__mall i{
+    font-size: .9rem;
+}
+
+.home-product-item__mall span{
+    margin: 2px 3px 0 8px;
 }
 
 .home-product-item__sale-off{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(255, 216, 64, .94);
+    width: 40px;
+    height: 36px;
+    text-align: center;
+}
 
+.home-product-item__sale-off::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-width: 0 20px 6px;
+    border-style: solid;
+    border-color: transparent rgba(255, 216, 64, .94) transparent rgba(255, 216, 64, .94);
 }
 
 .home-product-item__sale-off-percent{
-
+    font-weight: 600;
+    color: #ee4d2d;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    position: relative;
+    top: 1px;
 }
 
 .home-product-item__sale-off-label{
-
+    font-size: 1.3rem;
+    line-height: 1.3rem; 
+    color: var(--white-color);
+    position: relative;
+    top: 3px;
+    font-weight: 600;
 }
 
 

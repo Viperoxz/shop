@@ -173,3 +173,39 @@ html{
 .select-input__link:hover{
     color: var(--primary-color);
 }
+
+.pagiantion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-item{
+    list-style: none;
+    margin: 0 12px;
+}
+
+.pagination-item__link{
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+}
+
+.pagination-item--active .pagination-item__link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active:hover .pagination-item__link{
+    background: #45abe3;
+}
+
+.agination-item__icon{
+
+}

@@ -1332,6 +1332,25 @@ i.home-product-item__like-icon-fill{
     color: #737373;
 }
 
+.payment, .transport{
+    display: inline-block;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    text-decoration: none;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    margin: 4px 2px;
+}
+
+.payment__link, .transport__link{
+    display: flex;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
 
 
 
